@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* max-width: 60em; */
+  max-width: 1000px;
+  /* width: 60em; */
+  padding: 0 1em;
+  margin: 0 auto;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.5;
+}
+
+aside {
+  font-size: 0.75em;
+}
+
+aside h5,
+aside p {
+  margin: 0;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  padding: 4em 0;
+}
+
+footer {
+  padding: 1em 0;
+}
+
+section {
+  display: flex;
+}
+
+section aside {
+  margin-left: 1em;
+}
+
+/* When the screen is below 600px wide
+we set the flex direction of section to column */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+/* When the screen is above 800px wide
+set a different color in the title */
+@media (min-width: 800px) {
+  h1 {
+    color: orange;
+  }
+}
+
+/* If we want to build with mobile first approach
+we'll use media (min-width: Xpx) whenever possible */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+nav a {
+  padding: 1em;
+}
